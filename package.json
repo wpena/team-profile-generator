@@ -1,0 +1,16 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "The application takes in information about employees on a software engineering team, then displays a basic summary for each person, so that a user has quick access to their emails and GitHub profiles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.3"
+  }
+}
