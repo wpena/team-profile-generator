@@ -5,11 +5,82 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const outputPath = './output/team.html';
+const teamMembers = [];
 
 const render = require("./src/page-template.js");
 
+function promptManager() {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "Enter the team manager's name..."
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Enter the team manager's employee ID..."
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Enter the team manager's email address..."
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "Enter the team manager's office number..."
+        }
+    ]);
+}
 
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
+function promptEngineer() {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "Enter the engineer's name..."
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Enter the engineer's employee ID..."
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Enter the engineer's email address..."
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "Enter the engineer's GitHub username..."
+        }
+    ]);
+}
 
+function promptIntern() {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "Enter the intern's name..."
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Enter the intern's employee ID..."
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Enter the intern's email address..."
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Enter the intern's school..."
+        }
+    ]);
+}
